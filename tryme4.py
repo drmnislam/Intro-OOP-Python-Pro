@@ -1,0 +1,39 @@
+#prints "." 9 times
+def nine_lines():
+    three_lines()
+    three_lines()
+    three_lines()
+    
+
+#prints "." 3 times
+def three_lines():
+
+    new_line()
+
+    new_line()
+
+    new_line()
+
+    
+#prints "." once
+def new_line():
+
+    print('.')
+
+    
+#prints "." 25 times
+def clear_screen():
+    nine_lines()
+    nine_lines()
+    three_lines()
+    three_lines()
+    new_line()
+
+    
+print('printing 9 lines') #place holder for easier counting
+nine_lines()
+print('printing 9 lines completed')#place holder for easier counting
+print('printing 25 lines')#place holder for easier counting
+clear_screen()
+print('printing 25 lines completed')#place holder for easier counting
+
