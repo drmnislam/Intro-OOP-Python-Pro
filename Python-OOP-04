@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fswiss\fcharset0 F53;}{\f2\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\sa200\sl276\slmult1\lang9\b\f0\fs22 Part:1\lang1023\b0\fs24\par
+\lang9\fs22 alphabet = "abcdefghijklmnopqrstuvwxyz"   \lang1023\fs24\par
+\lang9\fs22 test_dups = ["zzz","dog","bookkeeper","subdermatoglyphic","subdermatoglyphics"] \lang1023\fs24\par
+\lang9\fs22 test_miss = ["zzz","subdermatoglyphic","the quick brown fox jumps over the lazy dog"] \lang1023\fs24\par
+\par
+\lang9\fs22 def histogram(s):\lang1023\fs24\par
+\lang9\fs22      d = dict()\lang1023\fs24\par
+\lang9\fs22      for c in s:\lang1023\fs24\par
+\lang9\fs22           if c not in d:\lang1023\fs24\par
+\lang9\fs22                d[c] = 1\lang1023\fs24\par
+\lang9\fs22           else:\lang1023\fs24\par
+\lang9\fs22                d[c] += 1\lang1023\fs24\par
+\lang9\fs22      return d \lang1023\fs24\par
+\par
+\lang9\fs22 def has duplicates(s):\lang1023\fs24\par
+\lang9\fs22 #Return False if each letter in s is not distinct\lang1023\fs24\par
+\lang9\fs22 return len(histogram(s)!=len(s)\lang1023\fs24\par
+\lang9\fs22         def mising_letters(s):\lang1023\fs24\par
+\lang9\fs22             h = histogram(s)\lang1023\fs24\par
+\lang9\fs22                 duplicate = "\lang1023\fs24\par
+\lang9\fs22 #Loop over letters in alphabet, if the is not in the histogram then\lang1023\fs24\par
+\lang9\fs22 #append to the return string.\lang1023\fs24\par
+\lang9\fs22     for c in alphabet:\lang1023\fs24\par
+\lang9\fs22          if c not in h:\lang1023\fs24\par
+\lang9\fs22              duplicate = duplicate + c\lang1023\fs24\par
+\lang9\fs22    return duplicate\lang1023\fs24\par
+\par
+\lang9\fs22 #Loop over test strings as required.\lang1023\fs24\par
+\lang9\fs22    for s in test_miss:\lang1023\fs24\par
+\lang9\fs22         miss = missing_letters(s)\lang1023\fs24\par
+\lang9\fs22      if miss:\lang1023\fs24\par
+\lang9\fs22            print(f"\{s\} is missing letters\{miss\}.")\lang1023\fs24\par
+\lang9\fs22      else:\lang1023\fs24\par
+\lang9\fs22           print(f"\{s\} uses all the letters.")\lang1023\fs24\par
+\lang9\fs22 Output:\lang1023\fs24\par
+\lang9\fs22 zzz is missing letters abcdefghijklmnopqrstuvwxy.\lang1023\fs24\par
+\lang9\fs22 subdermatoglyphic is missing letters fjknqvwxz.\lang1023\fs24\par
+\lang9\fs22 the quick brown fox jumps over the lazy dog uses all the letters.\lang1023\fs24\par
+\par
+\lang9\b\fs22 #\b0 Write a function called has_duplicates that takes a string parameter and returns True if the string has any repeated characters. Otherwise, it should return False.  \lang1023\fs24\par
+\lang9\f1\fs20          been_called = True\lang1023\f0\fs24\par
+\pard\nowidctlpar\f1\fs20          def duplicate2():\f0\fs24\par
+\par
+\f1\fs20                global been_called\f0\fs24\par
+\par
+\f1\fs20          been_called = False\f0\fs24\par
+\par
+\par
+\pard\nowidctlpar\sa200\sl276\slmult1\lang9\b\fs22 For example:1\lang1023\b0\fs24\par
+\lang9\fs22        t1 = ['aaa']\lang1023\fs24\par
+\lang9\fs22      t2 = ['abc']\lang1023\fs24\par
+\par
+\lang9\fs22            print(t1)\lang1023\fs24\par
+\lang9\fs22            print(t2)\lang1023\fs24\par
+\lang9\fs22 OutputL:\lang1023\fs24\par
+\lang9\fs22 ['aaa']\lang1023\fs24\par
+\lang9\fs22 ['abc']\lang1023\fs24\par
+\lang9\fs22 aaa has duplicates\lang1023\fs24\par
+\lang9\fs22 abc has no duplicates \lang1023\fs24\par
+\par
+\lang9\b\fs22 Part: 2 \lang1023\b0\fs24\par
+\lang9\b\fs22 #The letters in the returned string should be in alphabetical order\b0 . \lang1023\fs24\par
+\lang9\fs22 alphabet = 'abcdefghijklmnopqrstuvwxy'\lang1023\fs24\par
+\lang9\fs22     test_miss = ["b:, "zzz"]\lang1023\fs24\par
+\lang9\fs22 def missing_letters(s)\lang1023\fs24\par
+\lang9\fs22     missing Alphabet =""\lang1023\fs24\par
+\lang9\fs22 global alphabet \lang1023\fs24\par
+\lang9\fs22    i = 0 \lang1023\fs24\par
+\lang9\fs22 while i<len(alphabet):\lang1023\fs24\par
+\lang9\fs22    if alphabet[i] not in s:\lang1023\fs24\par
+\lang9\fs22 missingAlphabet += alphabet[i]\lang1023\fs24\par
+\lang9\fs22    i+= 1\lang1023\fs24\par
+\lang9\fs22 sortedmissingAlphgabetslists= sorted(missingAlphabetslists)\lang1023\fs24\par
+\lang9\fs22 sortedmissingAlphabets = ".join(sortedmissingAlphabetslists)\lang1023\fs24\par
+\lang9\fs22      return sortedmissingAlphabets\lang1023\fs24\par
+\lang9\fs22 for i in test_miss:\lang1023\fs24\par
+\lang9\fs22      print('\{\} is missing letters \{\}'. format(i, missing_letters(i))\lang1023\fs24\par
+\lang9\fs22 b is missing letters abcdefghijklmnpqrstuvwxyz\lang1023\fs24\par
+\lang9\fs22      zzz is missing letters abcdefghijklmnopqrstuvwxy\lang1023\fs24\par
+\lang9\b\fs22 Reference:\lang1023\fs24\par
+\lang9\fs22 #\b0  Downey, A. (2015). Think Python: How to think like a computer scientist. Needham, Massachusetts: Green Tree Press. \lang1023\fs24\par
+\par
+\pard\sa200\sl276\slmult1\lang9\f2\fs22\par
+}
