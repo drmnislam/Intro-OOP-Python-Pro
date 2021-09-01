@@ -1,0 +1,144 @@
+Using a text editor, create a Python script named tryme3.py . Write a function in this file called nine_lines that uses three_lines to print nine blank lines. Now add a function named clear_screen that prints out twenty-five blank lines. The last line of your program should be a call to clear_screen.
+
+Answer: 
+def new_line():
+ print
+
+def three_lines():
+ new_line()
+ new_line()
+ new_line()
+
+def nine_lines():
+ three_lines()
+ three_lines()
+ three_lines()
+
+def clear_screen():
+ nine_lines()
+ nine_lines()
+ three_lines()
+ three_lines()
+ new_line()
+
+clear_screen()
+
+Move the last line of tryme3.py to the top of the program, so the function call to clear_screen appears before the function definition. Run the program and record what error message you get. Can you state a rule about function definitions and function calls which describes where they can appear relative to each other in a program?
+
+Answer:
+It is impossible to call a function before it is defined in the program. So the program will not recognize the syntax in the code.
+"There's an error in your program. Invalid Syntax."
+
+3. Starting with a working version of tryme3.py , move the definition of new_line after the definition of three_lines. Record what happens when you run this program. Now move the definition of new_line below a call to three_lines(). Explain how this is an example of the rule you stated in the previous exercise.
+
+Answer:
+After 'new_line' is moved after the definition of 'three_lines' and program is run, this message appears:
+"There's an error in your program. Invalid Syntax."
+
+After the definition of 'new_line' is moved below a call to 'three_lines' and program is run, this message appears:
+"There's an error in your program: unindent does not match any outer indentation level."
+
+4. Fill in the body of the function definition for cat_n_times so that it will print the string, s, n times:
+def cat_n_times(s, n):
+    <fill in your code here>
+Save this function in a script named import_test.py. Now at a unix prompt, make sure you are in the same directory where the import_test.py is located ( ls should show import_test.py). Start a Python shell and try the following:
+>>> from import_test import *
+>>> cat_n_times('Spam', 7)
+SpamSpamSpamSpamSpamSpamSpam
+If all is well, your session should work the same as this one. Experiment with other calls to cat_n_times until you feel comfortable with how it works.
+
+Answer:
+def cat_n_times(a,b):
+    print a * b
+>>> 
+harneyharneyharney
+>>> 
+
+
+
+Using the IDLE development environment, create a Python script named tryme3.py . Write a function in this file called nine_lines that uses a function called three_lines to print nine blank lines. Now add a function named clear_screen that prints out twenty-five blank lines. The last line of your program should call the function to clear_screen .
+The  function three_lines and new_line are defined below so that you can see a nested function call.
+def new_line():
+print()
+def three_lines():
+new_line()
+new_line()
+new_line()
+Submit your Python script file in the posting of your assignment. Your Python script should be either a .txt file or a .py file. You must execute your script and copy and paste the output produced into a document that you will submit along with your python script. It is very helpful if you print a placeholder between the printing of 9 lines and the printing of 25 lines. It will make your output easier to read for the assessor. A placeholder can be a comment such as “now printing 9 lines” or “now printing 25 lines”.
+ANSWER:
+def new_line():
+print()
+def three_lines():
+new_line()
+new_line()
+new_line()
+def nine_lines():
+three_lines()
+three_lines()
+three_lines()
+print(“First Line.”)
+print(“now running nine blank lines…”)
+nine_lines()
+print(“Second Line.”)
+def clear_section():
+nine_lines()
+nine_lines()
+three_lines()
+three_lines()
+new_line()
+print(“Line 1”)
+print(“now printing 25 black lines…”)
+clear_section()
+print(“Line 26”)
+
+ What will the output of this program be when it is executed?
+def test_function( length, width, height):
+print (“the area of the box is ”, length*width*height)
+return length*width*height
+l = 12.5
+w = 5
+h = 2
+test_function(l, w, h)
+print (“The area of the box is ”, length*width*height) 
+A NameError because a variable not defined
+What will the output of the following code be?
+def recursive( depth ):
+depth+=1
+while (depth < 5):
+ret = recursive(depth)
+return depth
+ret = recursive( 0 )
+print (“the recursive depth is ”, ret)
+None
+What does the import statement in the following script do?
+import StringIO
+output = StringIO.StringIO()
+output.write(‘First line.\n’)
+output.close()
+It includes a Python module called StringIO into the script
+
+The following Python script will generate an error when executed.  What is the cause of the error?
+def function2(param):
+print (param, param)
+print (cat)
+def function1(part1, part2):
+cat = part1 + part2
+function2(cat)
+chant1 = “See You ”
+chant2 = “See Me ”
+function1(chant1, chant2)
+
+What does function subroutine do?
+def subroutine( n ):
+while n > 0:
+print (n,)
+n -= 1
+Counts from n down to 1 and displays each number
+The following code is an example of what principle?
+bruce = 5
+print (bruce,)
+bruce = 7
+print (bruce)
+
+Advertisements
+
