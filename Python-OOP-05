@@ -1,0 +1,98 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Cambria;}{\f1\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\b\f0\fs24 Part: 1\par
+\b0\f1 Copy the loop from Section 7.5 and encapsulate it in a function called mysqrt\par
+that takes a as a parameter, chooses a reasonable value of x, and returns an\par
+estimate of the square root of a.\b\par
+\f0 import math \par
+\b0 def my_sqrt(a):\par
+      a= float(a)\par
+#It takes a as a parameter\f1 .\f0\par
+      x = float(a/ 2)\par
+# It chooses a starting value of x\f1 .\f0\par
+       while True: \par
+        y = (x + a/x) / 2.0\par
+# It returns an estimate of the square root of a\f1 .\f0\par
+        if y == x: \par
+         break \par
+          x = y \par
+         return x\par
+ print(my_aqrt(2))\par
+Output:\par
+1.414213562373095\par
+>>>\par
+ def test_sqrt(a):\par
+# The function test_aqrt prints a table\f1 .\f0  \par
+while 1<=a<=25:\par
+It test_sqrt that prints a table using a while loop \f1 .\f0\par
+for a in range(1, a+1):\par
+diff = my_sqrt(a) - math\f1 .sqrt(a)\par
+\f0\par
+\b Part:2\par
+\b0 Write a function named test_sqrt that prints a table like the following using a while loop, where "diff" is the absolute value of the difference between my_sqrt(a) and math.sqrt(a). \par
+\par
+To test it, write a function named test_square_root that prints a table like this:\par
+a   mysqrt(a)      math.sqrt(a)   diff\par
+-   ---------      ------------   ----\par
+1.0 1.0            1.0            0.0\par
+2.0 1.41421356237  1.41421356237  2.22044604925e-16\par
+3.0 1.73205080757  1.73205080757  0.0\par
+4.0 2.0            2.0            0.0\par
+5.0 2.2360679775   2.2360679775   0.0\par
+6.0 2.44948974278  2.44948974278  0.0\par
+7.0 2.64575131106  2.64575131106  0.0\par
+8.0 2.82842712475  2.82842712475  4.4408920985e-16\par
+9.0 3.0            3.0            0.0\par
+\par
+The first column is a number, a;\par
+the second column is the square root of a computed with mysqrt;\par
+the third column is the square root computed by math.sqrt;\par
+the fourth column is the absolute value of the difference between the two estimates."""\par
+\par
+# my table in not formatted identical with given one; no idea how to do it like this;\par
+\par
+import math\par
+def mysqrt(a):\par
+"""Calculates square root using Newton's method:\par
+{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Newton's_method"}}{\fldrslt{\ul\cf1 https://en.wikipedia.org/wiki/Newton's_method}}}\f0\fs24\par
+a - positive integer < 0;\par
+x - estimated value, in this case a/2\par
+"""\par
+x = a/2\par
+while True:\par
+        estimated_root = (x + a/x) / 2\par
+       if estimated_root == x:\par
+            return estimated_root\par
+             break\par
+       x = estimated_root\par
+def test_square_root(list_of_a):\par
+      """Displays outcomes of calculating square root of a using different methods;\par
+list_of_a - list of positive digit.""''\par
+\par
+line1a = "a"\par
+line1b = "mysqrt(a)"\par
+line1c = "math.sqrt(a)"\par
+line1d = "diff"\par
+\par
+line2a = "-"\par
+line2b = "---------"\par
+line2c = "------------"\par
+line2d = "----"\par
+\par
+spacing1 = " "\par
+spacing2 = " " * 3\par
+spacing3 = ""\par
+\par
+print(line1a, spacing1, line1b, spacing2, line1c, spacing3, line1d)\par
+print(line2a, spacing1, line2b, spacing2, line2c, spacing3, line2d)\par
+\par
+for a in list_of_a:\par
+      col1 = float(a)\par
+      col2 = mysqrt(a)\par
+      col3 = math.sqrt(a)\par
+      col4 = abs(mysqrt(a) - math.sqrt(a))\par
+\par
+       print(col1, "\{:<13f\}".format(col2), "\{:<13f\}".format(col3), col4)\tab    \par
+test_square_root(range(1,10))\tab\tab  \par
+\par
+}
