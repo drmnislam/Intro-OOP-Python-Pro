@@ -1,0 +1,32 @@
+>>> print 'Hello, World!'
+File "<input>", line 1
+    print 'Hello, World!'
+                        ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print('Hello, World!')?
+In this example we are calling on the print function in python. In this case to “print” the words hello world, But we get a syntax error.  Meaning the python cannot interpret our input. We will need to add parentheses to indicate that we are calling on the print function.
+>>>print('hello world!')
+hello world!
+In python 2 we do not need to use the parentheses to print. Meaning that print is not a function in python 2, whereas in python 3 we do need to use the parentheses. Indicating that in python 3 print is a function.
+ 
+>>> 1/2
+0.5
+In this example we have used python like a calculator by performing simple division.
+ 
+>>> type(1/2)
+<class 'float'>
+Numbers are grouped into “types” or classes for example we get. Integers and floats. In this case we have asked python what type 1/2 is, python responds with “float” indicating to us that this a decimal number.
+ 
+ 
+>>> print(01)
+File "<input>", line 1
+    print(01)
+           ^
+SyntaxError: invalid token
+When putting a 0 in front of a number in python we are saying that the number after the 0 should be interpreted as an octal digit. We should instead write 0o1 python will now be able to interpret this as an octal number
+print(0o1)
+1
+ 
+>>> 1/(2/3)
+1.5
+Once again we are using python to solve a simple math. Giving us the correct answer of 1.5
+ 
