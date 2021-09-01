@@ -75,9 +75,13 @@ Example:
 3! = 3 * 2!
 2! = 2 * 1
 
+![Pyton](https://user-images.githubusercontent.com/64193583/131711950-c01f7cc6-00e8-4268-989a-582dba832c7d.jpg)
+
+
 Replacing the calculated values gives us the following expression
 
 4! = 4 * 3 * 2 * 1
 
 Generally we can say: Recursion in computer science is a method where the solution to a problem is based on solving smaller instances of the same problem.
-![Pyton](https://user-images.githubusercontent.com/64193583/131711950-c01f7cc6-00e8-4268-989a-582dba832c7d.jpg)
+
+![images](https://user-images.githubusercontent.com/64193583/131712163-81ed6d21-e8f7-4625-8dd8-ba1b52efee0d.jpg)
