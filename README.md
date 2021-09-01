@@ -1,44 +1,83 @@
-All-Praised to Lord: 
-I would like to thank you very much to my mommy and daddy, also the professor/ Instructor locally and globally, and my classmates for your dedication and guidance should be forward my extra eyes which I can use to see the light. Those who have given sacrifices in their life to make a man either a good person and professional in every field, meet me with premium sites and professional technical sites as far. 
-
-သခင်မြတ်အားချီးမြှောက်ပါရှင့်
-ဒေသအလိုက်နှင့်ကမ္ဘာတစ်ဝှမ်းရှိပါမောက္ခ / နည်းပြများ၊ ကျွန်ုပ်၏မိခင်နှင့်ဖေဖေအားများကို ကျေးဇူးတင်ရှိပါသည်။ သင်၏ရည်မှန်းချက်နှင့်လမ်းညွှန်မှုအတွက်ကျွန်ုပ်၏အတန်းဖော်များသည်ကျွန်ုပ်၏အလင်းကိုမြင်နိုင်ရန်ကျွန်ုပ်၏မျက်လုံးများကိုရှေ့သို့သာထားသင့်သည်။  လူတစ်ယောက်ကိုလူကောင်းတစ်ယောက်ဖြစ်ရန်နှင့်နယ်ပယ်အသီးသီးမှကျွမ်းကျင်သူဖြစ်စေရန်သူတို့၏အသက်တာတွင်စွန့်လွှတ်အနစ်နာခံသူများသည်ကျွန်ုပ်ကိုအစဉ်အဆက်အဆင့်မြင့်သော ၀က်ဘ်ဆိုက်များနှင့်ပရော်ဖက်ရှင်နယ်နည်းပညာဆိုင်ရာဆိုဒ်များနှင့်တွေ့ဆုံကြသည်။
+ef is_divisible(x, y):  # funcytion from section 6.4
 
 
-Scientific & Scholars Research Community: 
-https://scholar.google.com/citations?user=k55u2RIAAAAJ&hl=en
-https://www.researchgate.net/profile/Maung-Noor-Islam-2
-https://www.researchgate.net/.../Innovative-Scientific...
-https://orcid.org/0000-0001-9975-4889
+if x % y == 0:
+      return true 
+else :
+   return false 
+def is_power (a, b): 
+if is_divisible (a, b ) == True:
+# This call the is divisible function to check, if  a is divisible by b.
+if a == b : 
+#  Same numbers are the power of themselves unless I'm mistakened (3^1 == 3).
+return True
+elif b== 1 :
+# codes moves onto the next condition if b does not equal to 1.
+if a == 1 : 
+# This condittion checks that only a power of 1 is 1 itself 
+return True 
+else:
+return False 
+elif: a / b % b == 0:
+# This condition checks if a/b  is  a power of b 
+return True 
+else:
+return False
+print(" is_power ( 10, 2) returns: ",
+is_power (10, 2))
+print("is_power (27, 3) returns: ",
+is power ( 27, 3) )
+print("is_power(1, 1 ) returns: ",
+is_power(1, 1))
+print("is_power(10, 1) returns: ",
+is_power(10 , 1 ))
+print("is_power(3, 3) returns: ",
+is_power (3, 3))
+
+# I'm sure theres a cleaner and more concice way tp write this but I am out of time
 
 
-Tech Education Community: 
-https://github.com/MaungNoorIslam
-https://www.linkedin.com/in/maung-noor-islam-1a1861196
-https://stackoverflow.com/users/12401032/maung-noor-islam
 
+One way to think about recursive functions is to start with base cases — usually these are the things you know to be true just by looking. In this case you know two things:
+• 1 is a power of everything because anything to the power of zero is 1
+• Only 1 is a power of 1
+In code that base case might look like:
+def is_power(a, b):
+    if a == 1:
+        return True
 
-Advanced IQ test & Skillful Engineering Hub: 
-https://app.pluralsight.com/profile/maungnoor-islam
-https://education.github.community/u/maungnoorislam/badges
+    if b == 1:
+        return a == 1
+If a == 1 this returns true because of base one. If a is not 1 then this will look at b if b is one it will only return true is a is one.
+Alone this returns True for is_power(1, 1), but false for is_power(10, 1).
+So for everything else:
+If a is not divisible by b then it's not power. If it is divisible by b then it's a power if a/b is a power of b. You can test the first with your existing function and the second by passing a/b back into this function (i.e. recursing):
+def is_divisible(x, y):
+    if x % y == 0:
+        return True
+    else:
+        return False
 
-Microsoft Student Ambassador: 
-https://studentambassadors.microsoft.com/en-US/profile
+def is_power(a, b):
+    if a == 1 or b == 1:                           # a more succinct way to test base case
+        return a == 1  
+    return is_divisible(a, b) and is_power(a/b, b) # divisible and recursions report True?
+Recursive functions take a while to get used to. It can help to add some print statements to the functions so you can see how it is being called.
 
+Recursion is a method of programming or coding a problem, in which a function calls itself one or more times in its body. Usually, it is returning the return value of this function call. If a function definition satisfies the condition of recursion, we call this function a recursive function.
 
-Personal IT Tech Website: 
-http://rcloudit.azurewebsites.net/
-www.artpen.tech
+Termination condition:
+A recursive function has to fulfil an important condition to be used in a program: it has to terminate. A recursive function terminates, if with every recursive call the solution of the problem is downsized and moves towards a base case. A base case is a case, where the problem can be solved without further recursion. A recursion can end up in an infinite loop, if the base case is not met in the calls.
 
-Remember: I am always am since my birthday still is, this is my hard work and dedication to prove myself, finally don't underestimate anyone, they can do too many things, just a journey begins with a life destination. 
+Example:
 
+4! = 4 * 3!
+3! = 3 * 2!
+2! = 2 * 1
 
-သတိရပါ: ကျွန်ုပ်မွေးနေ့သည်အစဉ်မပြတ်ငါဖြစ်သည်၊ ကျွန်ုပ်သည်ကျွန်ုပ်၏ကြိုးစားအားထုတ်မှုနှင့်မိမိကိုယ်ကိုသက်သေပြရန်ရည်မှန်းချက်ဖြစ်သည်။ နောက်ဆုံးတွင်မည်သူ့ကိုမျှလျှော့မတွက်ပါနှင့်၊ သူတို့သည်အရာရာများစွာကိုလုပ်နိုင်သည်၊ ဘဝကို ဦးတည်ရာလမ်းကြောင်းဖြင့်စတင်သည်။
+Replacing the calculated values gives us the following expression
 
+4! = 4 * 3 * 2 * 1
 
-Undergraduate Student 
-Department of Computer Science 
-Maung Noor Islam 
-ဘွဲ့ကြိုကျောင်းသား ကွန်ပျူတာသိပ္ပံ
-
-
+Generally we can say: Recursion in computer science is a method where the solution to a problem is based on solving smaller instances of the same problem.
+![Pyton](https://user-images.githubusercontent.com/64193583/131711950-c01f7cc6-00e8-4268-989a-582dba832c7d.jpg)
