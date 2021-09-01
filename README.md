@@ -39,9 +39,6 @@ Remember: I am always am since my birthday still is, this is my hard work and de
 Undergraduate Student 
 Department of Computer Science 
 Maung Noor Islam 
-ဘွဲ့ကြိုကျောင်းသား
-ကွန်ပျူတာသိပ္ပံ
-ယျာဌေးမြင့်(မျိုးစိတ်)
- (၂၈-၆-၂၀၂၁)
+ဘွဲ့ကြိုကျောင်းသား ကွန်ပျူတာသိပ္ပံ
 
-![MHD](https://user-images.githubusercontent.com/64193583/129483485-2db02546-39ad-4cf5-a6ed-3d6ca43f1872.jpeg)
+
